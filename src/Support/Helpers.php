@@ -167,7 +167,7 @@ function str_limit_chars(string $string, int $limit, string $pointer = "..."): s
  */
 function url(string $path = null): string
 {
-    // TODO: take a look on this function
+    // TO-DO: take a look on this function
     if($_SERVER['HTTP_HOST'] === "localhost"){
         if($path){
             return CONF_URL_TEST . "/" . ($path[0] == "/" ? mb_substr($path, 1) : $path);
@@ -297,4 +297,4 @@ function passwd_rehash(string $hash): bool
     return password_needs_rehash($hash, CONF_PASSWD_ALGO, CONF_PASSWD_OPTION);
 }
 
-// TODO: create CSRF helper functions.
+// TO-DO: create CSRF helper functions.
