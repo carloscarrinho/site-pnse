@@ -1,0 +1,34 @@
+{
+    "name": "carloscarrinho/siteparoquia",
+    "description": "Site da Paróquia Nossa Senhora da Esperança em Cidade Continental, Serra-ES.",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Carlos Eduardo Carrinho",
+            "email": "carrinhoedu@gmail.com",
+            "homepage": "http://www.carloscarrinho.com",
+            "role": "Developer"
+        }
+    ],
+    "config":{
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        },
+        "files": [
+            "src/Support/Config.php",
+            "src/Support/Helpers.php",
+            "src/Support/Minify.php"
+        ]
+    },
+    "require": {
+        "php": "^7.1",
+        "ext-pdo": "^7.1",
+        "phpmailer/phpmailer": "~6.0",
+        "league/plates": "v4.0.0-alpha",
+        "matthiasmullie/minify": "^1.3",
+        "coffeecode/router": "^1.0"
+    }
+}
