@@ -1,13 +1,35 @@
 <?php
+ob_start();
+
+use CoffeeCode\Router\Router;
+use Source\Core\Session;
 
 require __DIR__ . "/vendor/autoload.php";
 
-$string = "Exemplo de string para função str_slug";
+/**
+ * BOOTSTRAP
+ */
 
-var_dump(
-    str_slug($string),
-    str_studly_case($string),
-    str_camel_case($string)
-);
+$session = new Session();
+$router = new Router(url(), "@");
+
+/**
+ * WEB ROUTES
+ */
+$router->namespace("Source\App");
+$router->get("/", "Web@home");
 
 
+/**
+ * ERROR ROUTES
+ */
+$router->namespace("Source\App")->group("/ops");
+$router->get("/{errcode}", "Web@error");
+
+
+/**
+ * ROUTE
+ */
+$router->dispatch();
+
+ob_end_flush();
