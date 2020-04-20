@@ -7,7 +7,7 @@ if(strpos($_SERVER['HTTP_HOST'], "localhost")){
      * CSS
      */
     $minCSS = new CSS();
-    $minCSS->add(__DIR__ . "/../../shared/styles/boot.css");
+    $minCSS->add(__DIR__ . "/../../shared/styles/global.css");
     $minCSS->add(__DIR__ . "/../../shared/styles/styles.css");
     $minCSS->add(__DIR__ . "/../../shared/styles/formularios.css");
 
@@ -25,7 +25,8 @@ if(strpos($_SERVER['HTTP_HOST'], "localhost")){
 
 
     /**
-     * MINIFICAR O JS
+     * JS
      */
+    
 
 }

@@ -8,14 +8,14 @@ define('CONF_DB_HOST', 'localhost');
 define('CONF_DB_PORT', '8000');
 define('CONF_DB_USER', 'root');
 define('CONF_DB_PASS', '');
-define('CONF_DB_NAME', 'pnse_full');
+define('CONF_DB_NAME', 'pnse');
 
 
 /**
  * URLs
  */
 define('CONF_URL_BASE', 'https://www.pnse.com.br');
-define('CONF_URL_TEST', 'https://www.localhost/pnse');
+define('CONF_URL_TEST', 'https://localhost/pnse');
 define('CONF_URL_ADMIN', '/admin');
 
 
@@ -71,10 +71,9 @@ define('CONF_MESSAGE_ERROR', 'error');
 /**
  * VIEW
  */
-// define('CONF_VIEW_PATH', __DIR__ . "/../../shared/views");
-define('CONF_VIEW_THEME', "pilot");
+define('CONF_VIEW_PATH', __DIR__ . "/../../shared/views");
 define('CONF_VIEW_EXT', "php");
-define('CONF_VIEW_PATH', __DIR__ . "/../../themes/" . CONF_VIEW_THEME);
+define('CONF_VIEW_THEME', "pilot");
 
 
 /**
