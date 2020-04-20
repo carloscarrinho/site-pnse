@@ -19,8 +19,8 @@
 <!-- HEADER -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
-        <a class="navbar-brand" href="index.php">
-            <img src="assets/img/woman.svg" alt="" width="45px">
+        <a class="navbar-brand" href="<?= url(); ?>">
+            <img src="<?= theme("/assets/img/woman.svg"); ?>" alt="" width="45px">
         </a>
         <button 
             class="navbar-toggler" 
@@ -35,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Página inicial<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?= url(); ?>">Página inicial<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" 
@@ -46,34 +46,19 @@
                     aria-expanded="false">A Paroquia
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="padroeira.php">Padroeira</a>
+                        <a class="dropdown-item" href="<?= url("/padroeira"); ?>">Padroeira</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Comunidades</a>
+                        <a class="dropdown-item" href="<?= url("/comunidades") ?>">Comunidades</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" 
-                    href="#" id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown">Movimentos & Pastorais</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Coordenação</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Catequese</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Pastoral Familiar</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Pastoral da Criança</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Liturgia</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Juventude</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Canto</a>
-                    </div>
+                    <a class="nav-link" href="<?= url('/pastorais'); ?>" >Movimentos & Pastorais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dizimo.php">Dízimo</a>
+                    <a class="nav-link" href="<?= url('/blog'); ?>">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= url('/dizimo'); ?>">Dízimo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="modal" data-target="#formulario-modal" href="#">Contato</a>

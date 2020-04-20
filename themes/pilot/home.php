@@ -145,7 +145,7 @@
             <div>
                 <a class="" href="#">
                     <div class="text-center">
-                        <img src="<?= theme("/assets/img/eucharist.svg"); ?>"alt="icone-missa" width="74">
+                        <img src="<?= theme("/assets/img/eucharist.svg") ?>"alt="icone-missa" width="74">
                     </div>
                     <div class="">
                         <p class="text-center p-2">Missas</p>
