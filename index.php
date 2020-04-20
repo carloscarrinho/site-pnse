@@ -1,35 +1,55 @@
 <?php
 ob_start();
 
-use CoffeeCode\Router\Router;
-use Source\Core\Session;
-
 require __DIR__ . "/vendor/autoload.php";
 
 /**
  * BOOTSTRAP
  */
+use CoffeeCode\Router\Router;
+use Source\Core\Session;
 
 $session = new Session();
-$router = new Router(url(), "@");
+$route = new Router(url(), "@");
 
 /**
  * WEB ROUTES
  */
-$router->namespace("Source\App");
-$router->get("/", "Web@home");
+$route->namespace("Source\App");
+
+    // pages
+    $route->get("/", "Web@home");
+    $route->get("/padroeira", "Web@patroness");
+    $route->get("/comunidades", "Web@churches");
+    $route->get("/pastorais", "Web@pastorals");
+    $route->get("/dizimo", "Web@tithe");
+
+    // blog
+    $route->get("/blog", "Web@blog");
+
+    // auth
+
+    // opt-in
 
 
 /**
  * ERROR ROUTES
  */
-$router->namespace("Source\App")->group("/ops");
-$router->get("/{errcode}", "Web@error");
+$route->namespace("Source\App")->group("/ops");
+$route->get("/{errcode}", "Web@error");
 
 
 /**
  * ROUTE
  */
-$router->dispatch();
+$route->dispatch();
+
+
+/**
+ * ERROR REDIRECT
+ */
+if($route->error()){
+    $route->redirect("/ops/{$route->error()}");
+}
 
 ob_end_flush();
