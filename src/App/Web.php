@@ -69,7 +69,19 @@ class Web extends Controller
         ]); 
     }
 
-    // TO-DO: Implement Blog page here
+    public function blog()
+    {
+        $head = $this->seo->render(
+            "Blog | " . CONF_SITE_NAME,
+            CONF_SITE_DESC,
+            url("/blog"),
+            theme("/assets/img/share.jpg")
+        );
+
+        echo $this->view->render("blog", [
+            "head" => $head
+        ]);
+    }
 
     public function tithe(): void
     {
