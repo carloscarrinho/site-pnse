@@ -15,10 +15,10 @@ if(strpos($_SERVER['HTTP_HOST'], "localhost")){
     // theme
     $cssDir = scandir(__DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/assets/css");
     foreach ($cssDir as $css) {
-        $cssFile = __DIR__ . "/../themes/" . CONF_VIEW_THEME . "/assets/css/{$css}";
+        $cssFile = __DIR__ . "/../../themes/" . CONF_VIEW_THEME . "/assets/css/{$css}";
         if(is_file($cssFile) && pathinfo($cssFile)['extension'] == "css"){
             $minCSS->add($cssFile);
-        };
+        }
     }
 
     // Minify CSS
