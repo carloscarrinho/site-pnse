@@ -1,0 +1,41 @@
+/* Estilos para a página do Blog */
+
+.blogPage {
+    width: auto;
+    height: 300px;
+    color: white;
+    margin-bottom: 2em;
+}
+    .blogPage__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogPage__title {
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .blogPage__subtitle {
+        font-size: 1.5em;
+        margin: 1em auto;
+        text-align: center;
+    }
+
+.blogSearch {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .formSearch__item {
+        margin: 1em;
+    }
+
+    .formSearch button {
+        background-color: white;
+        color: green;
+    }
