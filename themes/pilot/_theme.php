@@ -92,18 +92,20 @@
                 </header>
                 <main class="modal-body">
                     <form>
-                    <div class="form-group">
-                        <label for="nome-usuario">Nome</label>
-                        <input type="text" class="form-control" id="nome-usuario" placeholder="Escreva seu nome aqui">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="seuemail@exemplo.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Mensagem</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva sua mensagem aqui" ></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="nome-usuario">Nome</label>
+                            <input 
+                            type="text" 
+                            class="form-control" id="nome-usuario" placeholder="Escreva seu nome aqui">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="seuemail@exemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Mensagem</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva sua mensagem aqui" ></textarea>
+                        </div>
                     </form>
                 </main>
                 <footer class="modal-footer">
@@ -113,7 +115,7 @@
             </dialog>
         </div>
     </div>
-
+    
     <?= $v->section("content"); ?>
 </main>
 
