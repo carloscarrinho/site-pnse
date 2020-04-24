@@ -1,38 +1,27 @@
 <?php $v->layout('_theme'); ?>
 
 <!-- FEATURE: PÁGINA DO BLOG -->
-<section class="blog_page">
-    <header class="blog_page_header">
-        <h1>BLOG</h1>
-        <p>Fique por dentro de tudo que acontece na paróquia</p>
-        <form name="search" action="<?= url("/blog"); ?>" method="post" enctype="multipart/form-data">
-            <label>
-                <input type="text" name="s" placeholder="Encontre um artigo:"/>
-                <button class="icon-search icon-notext"></button>
+<section class="blogPage bg-success">
+    <header class="blogPage__header">
+        <h1 class="blogPage__title">BLOG</h1>
+        <p class="blogPage__subtitle">Fique por dentro de tudo que acontece na paróquia</p>
+        <div class="blogSearch">
+            <form 
+                class="form my-2 my-lg-0" 
+                name="search" 
+                action="<?= url("/blog"); ?>" 
+                method="post" 
+                enctype="multipart/form-data"
+            >
+            <label class="blogSearch">
+                <input 
+                    class="formSearch__item form-control mr-sm-2" 
+                    type="text" name="s" placeholder="Encontre um artigo"
+                />
+                <button class="btn btn-light my-2 my-sm-0">Pesquisar</button>
+            
             </label>
-        </form>
+            </form>
+        </div>
     </header>
-
-    <!--EMPTY CONTENT-->
-    <div class="content content">
-        <div class="empty_content">
-            <img class="empty_content_cover" title="Empty Content" alt="Empty Content"
-                 src="<?= theme("/assets/images/empty-content.jpg"); ?>"/>
-            <h3 class="empty_content_title">Ooops, não temos conteúdo aqui :/</h3>
-            <p class="empty_content_desc">Ainda estamos trabalhando, em breve teremos novidades para você :)</p>
-            <a href="<?= url("/blog"); ?>" title="Blog"
-               class="empty_content_btn gradient gradient-green gradient-hover radius">Voltar ao blog</a>
-        </div>
-    </div>
-
-    <!--BLOG-->
-    <div class="blog_content container content">
-        <div class="blog_articles">
-            <?php for ($i = 0; $i <= 8; $i++): ?>
-                <?php $v->insert("blog-list"); ?>
-            <?php endfor; ?>
-        </div>
-
-        <?= $paginator; ?>
-    </div>
 </section>
