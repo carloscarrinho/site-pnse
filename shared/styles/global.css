@@ -1,14 +1,64 @@
 /* Estilos globais da aplicação */
 
-
-
-/* Estilos para página "Comunidades" */
-.church {
-    display: flex;
-    justify-content: space-between;
-    line-height: 1.5em;
-    margin-bottom: 2em;
+.fixed {
+    position: fixed;
 }
-    .church__description___text {
-        text-align: justify;
+
+.navBar {
+    width: auto;
+    height: 10%;
+    padding: 0.5em;
+    border-bottom: solid 1.5px green;
+    display: flex;
+}
+    .navBar__logo {
+        width: 10%;
+        justify-content: center;
     }
+
+    .navBar__menu {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+        .navBar__menu li {
+            padding: 0.5em 1em;
+        }
+        .navBar__menu a {
+            color: green;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+    .navBar__search {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.25em;
+    }
+        .navBar__search input {
+            height: 2.5em;
+            padding: 0.25em;
+            border: solid 0.5px gray;
+            border-radius: 4px;
+        }
+
+        .navBar__search button {
+            height: 2.5em;
+            padding: 0.25em;
+            border-radius: 4px;
+            border: 0;
+
+            cursor: pointer;
+            background-color: springgreen;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+
+            transition: filter .2s;
+        }
+        .navBar__search button:hover {
+            filter: brightness(80%);
+        }
