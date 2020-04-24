@@ -1,0 +1,10 @@
+/* Estilos para página "Comunidades" */
+.church {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5em;
+    margin-bottom: 2em;
+}
+    .church__description___text {
+        text-align: justify;
+    }
