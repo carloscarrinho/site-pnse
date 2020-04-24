@@ -1,0 +1,25 @@
+.pastoral {
+    background-color: greenyellow;
+    
+    display: flex;
+    margin-bottom: 2em;
+}
+
+    .pastoral__img {
+        height: 300px;
+    }
+
+    .pastoral__description {
+        background-color: indianred;
+    }
+        .pastoral__description___title {
+            text-align: center;
+        }
+
+        .pastoral__description___text {
+            text-align: justify;
+            padding: .5em 1em;
+        }
+    .pastoral__footer___info {
+        text-align: right;
+    }
